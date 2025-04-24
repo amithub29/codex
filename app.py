@@ -10,8 +10,10 @@ def index():
 
 @app.route("/version", methods=["GET"])
 def version():
-    return "v0.0.1\n", 200
+    version = "v0.0.1"
+    print(version)
+    return version, 200
 
 
 if __name__ == "__main__":
-    app.run(host="localhost", port="5500", debug=True)
+    app.run(host="0.0.0.0", port="5500", debug=True)
